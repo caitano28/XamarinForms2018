@@ -5,7 +5,7 @@
     <ContentPage.Content>
         <StackLayout BackgroundColor="LightSkyBlue" VerticalOptions="FillAndExpand">
             <Label Text="Vamos Começar" TextColor="Blue" VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand"/>
-            <Button Image="play.png" BackgroundColor="Transparent" VerticalOptions="CenterAndExpand"/>
+            <Button Image="play.png" BackgroundColor="Transparent" VerticalOptions="CenterAndExpand" Clicked="Button_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

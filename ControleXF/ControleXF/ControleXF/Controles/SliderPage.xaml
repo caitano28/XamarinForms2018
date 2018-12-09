@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ControleXF.Controles.SliderPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Slider
+                Minimum="0"
+                Maximum="100"
+                Value="20"
+                
+                ValueChanged="Slider_ValueChanged"
+                />
+            <Label x:Name="LblResult" />
+
+            <Stepper 
+                Minimum="0"
+                Maximum="10"
+                Increment="2"
+                ValueChanged="Stepper_ValueChanged"
+                Value="4"
+                />
+            <Label x:Name="LblResult2" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
