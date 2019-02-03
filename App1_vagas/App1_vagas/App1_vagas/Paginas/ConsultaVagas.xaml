@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1_vagas.Paginas.ConsultaVagas">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Vagas" FontSize="24"/>
+                <Label Text="Encontre seu emprego aqui" FontSize="12"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Adicionar" Clicked="GoCadastro"/>
+                <Button Text="Minhas Vagas" Clicked="GoVagas"/>
+            </StackLayout>
+
+            <ListView>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="100"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <Label Text="{Binding NomeVaga}" FontAttributes="Bold" Grid.Column="0"/>
+                            <Label Text="{Binding Empresa}" Grid.Column="0"/>
+                            <Label Text="{Binding Empresa}" Grid.Column="0"/>
+
+                            <Label Text="+Detalhe">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="MaisDetalhesAction" CommandParameter="{Binding .}"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

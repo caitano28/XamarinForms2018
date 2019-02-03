@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App2_ListaBrasil.Estados">
+    <ContentPage.Content>
+        <ListView HasUnevenRows="True" x:Name="ListaEstados" ItemSelected="ListaEstados_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="10" HorizontalOptions="FillAndExpand">
+                            <Label Text="{Binding nome}" FontAttributes="Bold" FontSize="Medium"/>
+                            <Label Text="{Binding sigla}" TextColor="Red"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>
